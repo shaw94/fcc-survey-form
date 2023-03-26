@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is a website I wanted to re-create using my knowledge of HTML/CSS so far. I might cheat here and there but the goal is to learn and take note of how things get done.">
+  <meta name="author" content="Mohamed Shaw">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>FreeCodeCamp Survey Replica</title>
+</head>
+
+<body>
+  <!-- We Have a container -->
+  <div class="container">
+    <!-- Remember to always contain related sections -->
+    <!-- Somtimes, the content tells you what the tag should be -->
+    <header>
+      <!-- An H1 -->
+      <h1>freeCodeCamp Survey Form</h1>
+      <!-- What I thought is an H2 but they used p -->
+      <!-- I am guessing it is like this because H1, and H2 do not usually go together -->
+      <p>Thank you for taking the time to help us improve the platform</p>
+    </header>
+
+    <!-- Even the button, should be in a form-group -->
+    <!--
+      Text inputs are given the classname form-controller, while other types are given input-typename
+
+      Labels are given the id of the thing they represent, so id="name-label"
+
+      Perfer to have non-value attributes last,
+
+      Age should have a min and max. I forgot it because I had not reviewed my HTML decks.
+     -->
+    <main>
+      <form action="" method="post">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your Email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="age" id="age-label">Age (optional)</label>
+          <input id="age" type="text" name="age" placeholder="Age" class="form-control">
+        </div>
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+      </form>
+    </main>
+  </div>
+  <!-- The Form Element -->
+
+  <!-- It does seem like within the form there is a container, or a padding. -->
+
+  <!-- Classes To use:
+    form-group for any group of label + input.
+  -->
+</body>
+
+</html>
