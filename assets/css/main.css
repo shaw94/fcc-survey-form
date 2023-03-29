@@ -9,7 +9,10 @@
   --color-darkblue: #1b1b32;
   --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
   --color-green: #37af65;
+
   --font-poppins: "Poppins", serif;
+  --text-body: 1.125rem;
+  --text-sm: 0.9rem;
 }
 
 /* Reset */
@@ -19,32 +22,149 @@
   box-sizing: border-box;
 }
 
-body {}
+p {
+  font-size: var(--text-body);
+  margin-block: 0 0.5rem;
+}
 
-body::before {}
+.text-sm {
+  font-size: var(--text-sm);
+  margin-inline-start: 0.2rem;
+}
 
-.container {}
+body {
+  font-family: var(--font-poppins);
+  font-size: 1rem;
+  color: var(--color-white);
+  line-height: 1.4;
+  margin: 0;
+}
 
-header {}
+/* Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+    115deg,
+    rgba(58, 58, 158, 0.8),
+    rgba(136, 136, 206, 0.7)
+  ),
+  url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-header h1 {}
+.container {
+  width: 100%;
+  margin-block: 3.125rem 0;
+  margin-inline: auto;
+}
 
-header p {}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
 
-main {}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
 
-main form {}
+header {
+  text-align: center;
+  margin-block-end: 1.875rem;
+}
 
-.form-group {}
+header h1 {
+  margin-block: 0 0.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
 
-.form-group label {}
+header p {
+  font-style: italic;
+  font-weight: 200;
+}
 
-.form-control {}
+form {
+  background: var(--color-darkblue-alpha);
+  padding-block: 2.5rem;
+  padding-inline: 0.625rem;
+  border-radius: 0.25rem;
+}
 
-.input-checkbox {}
+@media (min-width: 480px){
+  form {
+    padding-block: 2.5rem;
+    padding-inline: 2.5rem;
+  }
+}
 
-.input-radio {}
+.form-group {
+  margin-block-end: 1.25rem;
+  margin-inline: auto;
+  padding-inline: 0.25rem;
+  padding-block: 0.25rem;
+}
 
-.input-textarea {}
+.form-group label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-block-end: 0.5rem;
+}
 
-.submit-button {}
+.form-control, .input-textarea, .submit-button {
+  display: block;
+  width: 100%;
+}
+
+.form-control, .input-textarea, .input-checkbox, .input-textarea, .submit-button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form-control {
+  height: 2.375rem;
+  padding-block: 0.375rem;
+  padding-inline: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.form-control:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+}
+
+.input-checkbox, .input-radio {
+  margin-inline-end: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  resize: vertical;
+  padding-inline: 0.625rem;
+  padding-block: 0.625rem;
+  min-height: 7.5rem;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 2px;
+  padding-inline: 0.75rem;
+  padding-block: 0.75rem;
+  background: var(--color-green);
+  color: var(--color-white);
+}

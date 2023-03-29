@@ -18,3 +18,16 @@ That way it has no value, it is selected, and also disabled
   <label for="email" id="email-label">Email</label>
 
 - To know which element to use, you should look at the content within it.
+
+- Margins are used to make seperation between the content, while padding is used to seperate the content from its border if that makes any sense.
+
+- I didn't know the resize property prior to this task
+
+- When height is engaged, it is always min/max which is exactly what everyone recommends.
+
+- Some inputs don't inherit styles from the body, therefore you must enforce that.
+
+- Input border is called outline which you can disable by giving it the value 0.
+
+- The selection state for the inputs is :focus.
+
