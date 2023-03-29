@@ -4,7 +4,7 @@ Lessons Learned
 
 - A div that contains both input and label is refered to as a form-group. Which is also the name used as the classname of that div.
 
-- Buttons are also in a form group, which I find weird
+- Buttons are also in a form group
 
 - Text inputs are given the classname of 'form-control' other types are given classnames of 'input-inputtype' for example, input-radio, input-checkbox input-textarea
 
@@ -17,11 +17,12 @@ That way it has no value, it is selected, and also disabled
 - If labels need to be distinguished, they are given ids, the naming convention for it is like so:
   <label for="email" id="email-label">Email</label>
 
-- To know which element to use, you should look at the content within it.
+- To know which element to use, you should look at the content within the design and make a judegment.
 
 - Margins are used to make seperation between the content, while padding is used to seperate the content from its border if that makes any sense.
 
-- I didn't know the resize property prior to this task
+- I didn't know the resize property prior to this task, which controls how an element is resized.
+I also did not know that it does not work on inline elements.
 
 - When height is engaged, it is always min/max which is exactly what everyone recommends.
 
@@ -30,4 +31,3 @@ That way it has no value, it is selected, and also disabled
 - Input border is called outline which you can disable by giving it the value 0.
 
 - The selection state for the inputs is :focus.
-
