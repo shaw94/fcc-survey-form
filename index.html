@@ -8,33 +8,19 @@
   <meta name="description"
     content="This is a website I wanted to re-create using my knowledge of HTML/CSS so far. I might cheat here and there but the goal is to learn and take note of how things get done.">
   <meta name="author" content="Mohamed Shaw">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
   <title>FreeCodeCamp Survey Replica</title>
 </head>
 
 <body>
-  <!-- We Have a container -->
   <div class="container">
-    <!-- Remember to always contain related sections -->
-    <!-- Somtimes, the content tells you what the tag should be -->
     <header>
-      <!-- An H1 -->
       <h1>freeCodeCamp Survey Form</h1>
-      <!-- What I thought is an H2 but they used p -->
-      <!-- I am guessing it is like this because H1, and H2 do not usually go together -->
       <p>Thank you for taking the time to help us improve the platform</p>
     </header>
-
-    <!-- Even the button, should be in a form-group -->
-    <!--
-      Text inputs are given the classname form-controller, while other types are given input-typename
-
-      Labels are given the id of the thing they represent, so id="name-label"
-
-      Perfer to have non-value attributes last,
-
-      Age should have a min and max. I forgot it because I had not reviewed my HTML decks.
-     -->
     <main>
       <form action="" method="post">
         <div class="form-group">
@@ -49,22 +35,67 @@
           <label for="age" id="age-label">Age (optional)</label>
           <input id="age" type="text" name="age" placeholder="Age" class="form-control">
         </div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select name="role" id="dropdown" class="form-control">
+            <option selected disabled value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="not-say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label><input type="radio" name="recommend-to-friend" class="input-radio" value="difinitely">
+            Definitely</label>
+          <label><input type="radio" name="recommend-to-friend" class="input-radio" value="maybe"> Maybe</label>
+          <label><input type="radio" name="recommend-to-friend" class="input-radio" value="not-sure"> Not sure</label>
+        </div>
+        <div class="form-group">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select name="favorite-feature" id="favorite-feature" class="form-control">
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value=open-source"">Open Source</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>What would you like to see improved? (Check all that apply)</p>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="front-end"> Front-end
+            Projects</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="back-end"> Back-end
+            Projects</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="data-viz"> Data
+            Visualization</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="challenges">
+            Challenges</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="o-s-community"> Open Source
+            Community</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="gitter-help-rooms"> Gitter
+            help rooms</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="videos"> Videos</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="city-meetups"> City
+            Meetups</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="wiki"> Wiki</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="forum"> Forum</label>
+          <label><input type="checkbox" name="wants-improved" class="input-checkbox" value="additional-courses">
+            Additional Courses</label>
+        </div>
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea name="comments" id="comments" class="input-textarea"
+            placeholder="Enter your comment here"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button white green">Submit</button>
+        </div>
       </form>
     </main>
   </div>
-  <!-- The Form Element -->
-
-  <!-- It does seem like within the form there is a container, or a padding. -->
-
-  <!-- Classes To use:
-    form-group for any group of label + input.
-  -->
 </body>
 
 </html>

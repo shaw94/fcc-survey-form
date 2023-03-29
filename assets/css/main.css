@@ -1,0 +1,50 @@
+/* We need the white, the light gray, the background, the purple, the button green */
+
+/* Set the variables */
+
+/* To reference colors, use --color-name */
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+  --font-poppins: "Poppins", serif;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {}
+
+body::before {}
+
+.container {}
+
+header {}
+
+header h1 {}
+
+header p {}
+
+main {}
+
+main form {}
+
+.form-group {}
+
+.form-group label {}
+
+.form-control {}
+
+.input-checkbox {}
+
+.input-radio {}
+
+.input-textarea {}
+
+.submit-button {}
