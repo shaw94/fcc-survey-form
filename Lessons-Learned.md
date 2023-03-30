@@ -28,6 +28,10 @@ I also did not know that it does not work on inline elements.
 
 - Some inputs don't inherit styles from the body, therefore you must enforce that.
 
-- Input border is called outline which you can disable by giving it the value 0.
-
 - The selection state for the inputs is :focus.
+
+- The background-image property can accept multiple backgrounds.
+
+- Best apply the font-styles and everything regarding fonts in the beginning to the body, most elements will inherit it but not all. This is especialy tricky with the inputs.
+
+- Span. is the div for inline elements.
